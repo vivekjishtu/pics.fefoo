@@ -564,7 +564,7 @@ function loadSubReddit(category, extra)
     var url = "http://www.reddit.com/" + category + ".json?jsonp=?";
     if(extra) url = "http://www.reddit.com/" + category + ".json?count=25&" + extra + "&jsonp=?"
     
-    document.getElementById("feed").innerHTML = "<br /> <br /> <center><img src='rotating_arrow.gif' /></center>";
+    document.getElementById("feed").innerHTML = "<br /> <br /> <center><img src='images/rotating_arrow.gif' /></center>";
     document.getElementById("navBottom").style.display = "none";
 	$(".panelPrevious,.panelNext").hide();
     
