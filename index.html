@@ -1,1 +1,164 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pics.fefoo</title>
+    <meta name="description" content="pics.fefoo is a picture browser for reddit. It lets you browse all the pictures currently on reddit in a river format." /> 
+    <meta name="title" content="pics.fefoo for reddit" />
+    <meta name="viewport" content="width=device-width">
+    
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <link href='http://fefoo.com/favicon.ico?v=1.00' rel='icon' type='image/vnd.microsoft.icon'/> 
+    <link rel="alternate" type="application/rss+xml" title="fefoo blog" href="http://feeds2.feedburner.com/fefoo" />
+    
+    <meta property="og:site_name" content="pics.fefoo"/>
+    <meta property="og:title" content="Reddit Pictures @ pics.fefoo.com"/>
+    <meta property="og:image" content="thumbnail.png"/>
+    <meta name="description" content="Browse through the latest pictures currently on reddit.com in a river format."/>
+    <meta property="og:type" content="website"/>
+    <meta property="fb:app_id" content="177092642422985"/>
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery.jsonp-2.1.4.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery.history.js?v=1.00" type="text/javascript"></script>
+    <script src="scripts/timesince.js?v=1.00" type="text/javascript" ></script>
+    <script src="scripts/script.js?v=1.31" type="text/javascript"></script>
+    <link href="style.css?v=1.17.11" type="text/css" rel="stylesheet" /> 
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" type="text/css" media="all" />
+   </head>
+  <body>
+    <div id="pnlNavigation"></div> <a href="#!/r/all/" id="pnlEdit">More � </a>
+    
+    <div id="tabBarTop">
+      <h1><a title="http://pics.fefoo.com/" href="./">pics.fefoo</a>/<a href="" target="_blank" id="lblPath"></a></h1>
+      <div class="tabs">
+        <a href="#hot" id="catHot" class="selected">what's hot</a>
+        <a href="#new" id="catNew">new</a>
+        <a href="#controversial" id="catControversial">controversial</a>
+        <a href="#top" id="catTop">top</a>
+      </div>
+      <div id="tips"><!--<span><strong>TIP</strong>: Use 'Shift + PgUp'/'Shift + PgDn', or 'j'/'k' to navigate</span>-->
+		
+	  </div>
+    </div>
+	
+	<div id="switchBack"><div class="fb-like" data-href="https://www.facebook.com/pics.fefoo" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true"></div> <!--<a href="/old">Switch back to Old Version</a> --></div>
+    
+    <div id="console"></div>
+    <div id="fixedBar">
+        <div id="fixedToolBar">Green</div>
+    </div>
+	
+	
+	
+    <div id="feed">
+        
+        <noscript>You need JavaScript to use this application. Turn on JavaScript to continue..</noscript>
+        
+        <center><br /> <br /> <img src='images/rotating_arrow.gif' /></center>
+        
+        <span class="image"> Loading..</span>
+        
+        <span class="image"> The files are taking way too long to load. Trying to load scripts without using the Coral Cache </span>
+    </div>
+    
+    <div id="navBottom">
+      <a href="#!" id="lnkPrevious">&lt; Previous</a>
+     
+      <a href="#!" id="lnkNext">Next &gt;</a>
+    </div>
+    
+	<a id="btnTop" href="#pnlNavigation" title="Takes you to the top of this page">&uArr; Top</a>
+    
+	<div class="betaMessage" style="display:none">
+		<p>This is the next version of <a href="http://pics.fefoo.com/">pics.fefoo.com</a> which is currently in beta. If you find any bugs or have any suggestions don't forget to tweet me.
+		</p>
+		<p>There will be times when this beta application might not work as expected. <a href="http://pics.fefoo.com/">Click here</a> to return back to the current stable release.
+		<p><a href="https://twitter.com/intent/tweet?screen_name=vivekjishtu" class="twitter-mention-button" data-related="vivekjishtu">Tweet to @vivekjishtu</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+	</div>
+	
+	<div id="copyRight">
+    <span>This website uses the Reddit API but is not affiliated or endorsed by <a href="http://reddit.com">reddit.com</a> | <a href="/nsfw">NSFW List</a> | <a href="/find_your_reddit_birthday">Find your Reddit Birthday</a></span>
+    <abbr title="Trademarks, logos and domain names (including, without limitation, the individual names of websites) are the property of their respective owners, who have no association or make any endorsement of the services. This website uses the Reddit API but is not affiliated or endorsed by reddit. " >
+    Copyright</abbr>  &copy; 2012 <a href="http://vivekjishtu.com">Vivek Jishtu</a>. Some rights reserved.
+    </div> 
+    
+    <a accesskey="n" href="#turnoff" id="switchNSFW"><u>N</u>SFW: <strong>ON</strong></a>
+    
+    <div id="dialogBoxes">
+      <div id="dialog-confirm" title="View adult content">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>You must be at least 18 to view this image. The image might contain nudity or graphic violence. <br /><br /> <strong>Are you sure you want to continue?</strong></p>
+      </div>
+
+      <div id="dialog-ie" title="Internet Explorer Unsupported">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+        Using this application on Internet Explorer might make it unresponsive. Use <a href="http://google.com/chrome">Chrome</a> or <a href="http://www.mozilla.com/firefox/">Firefox</a> to view it. <br /><br />  <strong>Are you sure you still want to continue?</strong>
+        </p>
+      </div>
+    </div>
+    
+    <div id="tabCats">
+        <span>
+            all | pics | funny | wtf | ffffffffuuuuuuuuuuuu | aww | itookapicture | wallpaper | gifs | gonewild
+        </span>
+    </div>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-347631-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<div class="panelPrevious">
+	<span> &lt; </span>
+</div>
+<div class="panelNext">
+	<span> &gt; </span>
+</div>
+
+<div id="shareBar"><div class="titleBar"></div> <strong>SHARE:</strong> <span></span> <span class="buttons"></span><button id="closeShareBar">X</button></div>
+<div id="fb-root"></div>
+<a style="visibility: hidden;" href="http://whos.amung.us/show/0si5r92l"><img border="0" alt="website stats" width="80" src="http://whos.amung.us/swidget/0si5r92l.gif" height="15"></a>
+<script>
+/*
+window.fbAsyncInit = function() {
+      //FB.init({ appId: '154589504586845', status: true, cookie: true, xfbml: true });
+	  FB.init({
+		  appId      : '177092642422985', // App ID
+		  //channelUrl : '//pics.fefoo.com/channel.html', // Channel File
+		  status     : true, // check login status
+		  cookie     : true //,
+		  //, // enable cookies to allow the server to access the session
+		 // xfbml      : true  // parse XFBML
+		});
+	} */ 
+</script>
+ <script>
+/*	 (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document)); */
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=177092642422985";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+  </body>
+</html>

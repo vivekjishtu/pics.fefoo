@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find your reddit birthday</title>
+    <meta name="description" content="Find you reddit birthday by entering your username" /> 
+    <meta name="title" content="Reddit Birthday" /> 
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <link href='http://fefoo.com/favicon.ico' rel='icon' type='image/vnd.microsoft.icon'/> 
+    <link rel="alternate" type="application/rss+xml" title="fefoo blog" href="http://feeds2.feedburner.com/fefoo" />
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../jquery.history.js" type="text/javascript"></script>
+    <script src="../jquery.jsonp-2.1.4.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../timesince.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet" /> 
+   </head>
+  <body>
+    <div id="page1">
+      <form id="frmSubmit">
+        <h2>Find your reddit birthday</h2>
+          Reddit username:
+          <input type="text" id="username" /> <input id="btnSubmit" type="submit" value="Search" />
+      </form>
+    </div>
+    
+    <div id="searching">
+      <center><img src="../rotating_arrow.gif" /></center>
+    </div>
+    
+    <div id="page2">
+      This account was made <strong id="results"></strong> ago on <strong id="bday1"> </strong>
+      
+      <p><a href="./">&lt Back</a></p>
+      <div id="bday"> </div>      
+    </div>
+    
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-347631-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    <div class="footer"><a href="view-source:" id="viewSource" target="_blank">View Source</a> | <a target="_blank" href="http://www.reddit.com/r/reddit.com/comments/cc97w/reddit_is_5_years_old_today/c0rl2ui">How does it work?</a></div>
+  </body>
+</html>

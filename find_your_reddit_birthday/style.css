@@ -1,0 +1,28 @@
+body, input
+{
+  font: menu; 
+  font-size: 50px;
+}
+
+#bday
+{
+ display: none;
+}
+
+#page2
+{
+  display: none;
+}
+
+#searching
+{
+  display: none;
+}
+
+.footer
+{
+  font-size: 11px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
